@@ -11,8 +11,8 @@ import java.util.Arrays;
 public class Constants {
 
     // Change these prefixes to the said AP prefix. Ex: for AP HAG, change prefix to !hag and slashPrefix to hag.
-    public static String prefix = "!csa";
-    public static String slashPrefix = "csa"; // Yea you have to put a / before this everytime
+    public static String prefix = "!precalc";
+    public static String slashPrefix = "precalc"; // Yea you have to put a / before this everytime
 
     public static int numUnits = 4; // The number of units the course has. Max of 25 units or else options crash
 
