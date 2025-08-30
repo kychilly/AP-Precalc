@@ -30,19 +30,19 @@ public class Constants {
 
     public static int[] pointTitles = {0, 100, 250, 500, 1000}; // (No Change) - Points until next title
 
-    public static int[] scorePercents = {77, 60, 42, 36}; // The percents to score a 5, 4, 3, and 2
+    public static int[] scorePercents = {67, 54, 42, 31}; // The percents to score a 5, 4, 3, and 2
 
     // (No Change) - Collegeboard logo
     public static String collegeBoardThumbnail = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2KG3StxIW0KW9EZP4pbSYbW-_1pJw9YtdR3HsZnyGTu1as-kFCJusA-qDROINnG9vJI&usqp=CAU";
 
     // Picture of the AP course(AP classroom picture)
-    public static String APPicture = "https://images-ext-1.discordapp.net/external/O91y0nM-QHluCrrKWyJaoTagrp9FvPlPzlggBaS-NZI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1401736371508613120/054bf5ff6af1656b42f02def5333e6ed.png?format=webp&quality=lossless&width=768&height=768";
+    public static String APPicture = "https://apcentral.collegeboard.org/media/images/media/apr-precalculus_0.png";
 
-    // To invite the bot to your server
-    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1401736371508613120&permissions=2147503104&integration_type=0&scope=bot";
+    // To invite the bot to your server (CHANGE THIS)
+    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1409616002412449873&permissions=2147503104&integration_type=0&scope=bot";
 
     // Bot mention
-    public static String botMention = "<@mention>";
+    public static String botMention = "<@1409616002412449873>";
 
     // (No Change) - Integrated AI prompt
     public static String COMMAND_GUIDE_PROMPT =
@@ -72,34 +72,34 @@ public class Constants {
     public static MessageEmbed createResourcesEmbed() {
         EmbedBuilder embed = new EmbedBuilder()
                 .setTitle("📚 AP " + Constants.slashPrefix.toUpperCase() + " Study Resources")
-                .setDescription("Here are some valuable resources to help you succeed in AP Computer Science A:")
+                .setDescription("Here are some valuable resources to help you succeed in AP Precalculus:")
                 .setColor(0x3498db)
                 .setThumbnail(Constants.collegeBoardThumbnail)
 
                 // Official College Board Resources
                 .addField("🎓 Official College Board Resources",
-                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-computer-science-a)\n" +
-                                "• [Course Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf)\n" +
-                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam)\n" +
+                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-precalculus)\n" +
+                                "• [Course Description](https://apcentral.collegeboard.org/pdf/ap-precalculus-course-and-exam-description.pdf)\n" +
+                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-precalculus/exam)\n" +
                                 "• [AP Classroom](https://myap.collegeboard.org/) (Requires teacher login)", false)
 
                 // Video Tutorials
                 .addField("📺 Video Tutorials",
-                        "• [College Board AP CSA Playlist](https://www.youtube.com/playlist?list=PLoGgviqq4845xKOY11PnkE4aqdBmDx1LO)\n" +
-                                "• [Khan Academy AP CSA](https://www.khanacademy.org/computing/ap-computer-science-principles)\n" +
-                                "• [CS Awesome Interactive Textbook](https://runestone.academy/ns/books/published/csawesome/index.html)", false)
+                        "• [Khan Academy Precalculus](https://www.khanacademy.org/math/precalculus)\n" +
+                                "• [PatrickJMT Precalculus Playlist](https://www.youtube.com/playlist?list=PL8B4D7F31C7A68C10)\n" +
+                                "• [Professor Leonard Precalculus](https://www.youtube.com/playlist?list=PLDesaqWTN6EQ2ztPBnU2K1FzZcb9qZxey)", false)
 
                 // Practice Sites
-                .addField("💻 Practice & Coding Sites",
-                        "• [CodingBat Java Practice](https://codingbat.com/java)\n" +
-                                "• [Practice-it (UW)](https://practiceit.cs.washington.edu/)\n" +
-                                "• [Replit Java Online IDE](https://replit.com/languages/java)", false)
+                .addField("💻 Practice & Problem Solving",
+                        "• [Khan Academy Exercises](https://www.khanacademy.org/math/precalculus)\n" +
+                                "• [Art of Problem Solving Precalculus](https://artofproblemsolving.com/store/book/precalculus)\n" +
+                                "• [Paul's Online Math Notes - Precalculus](http://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx)", false)
 
                 // Additional Help
                 .addField("🆘 Additional Help",
-                        "• [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)\n" +
-                                "• [GeeksforGeeks Java](https://www.geeksforgeeks.org/java/)\n" +
-                                "• [Stack Overflow](https://stackoverflow.com/)", false)
+                        "• [Desmos Graphing Calculator](https://www.desmos.com/calculator)\n" +
+                                "• [Wolfram Alpha](https://www.wolframalpha.com/)\n" +
+                                "• [Stack Exchange Mathematics](https://math.stackexchange.com/)", false)
 
                 // Bot Invite
                 .addField("🤖 Bot Invite",
@@ -110,6 +110,7 @@ public class Constants {
         return embed.build();
     }
 
+
     // (No Change) - The total number of questions in the units
     public static int sum;
 
@@ -117,7 +118,7 @@ public class Constants {
     public static void SendAvailableQuestions(MessageReceivedEvent event) {
 
         EmbedBuilder embed = new EmbedBuilder();
-        embed.setTitle("📚 Available Practice Questions 📚");
+        embed.setTitle("📚 AP Precalculus Practice Questions 📚");
         embed.setThumbnail(Constants.APPicture);
         embed.setColor(0x3498db);
 
@@ -126,35 +127,37 @@ public class Constants {
                         Constants.slashPrefix + "-test` to start practicing!\n----------------------------------------------------", sum
         ));
 
-        embed.addField("**Unit 1:** Using Objects & Methods",
+        embed.addField("**Unit 1:** Polynomial & Rational Functions",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on Strings, Math, method calls, and basic object interaction.\n\u200B",
+                        "🔹 **%d questions**\nCovers factoring, zeros, end behavior, asymptotes, and graphing of polynomial and rational functions.\n\u200B",
                         Unit1.numUnit1Questions),
                 false);
 
-        embed.addField("**Unit 2:** Selection & Iteration",
+        embed.addField("**Unit 2:** Exponential & Logarithmic Functions",
                 String.format(
-                        "🔹 **%d questions**\nCovers if/else, boolean expressions, loops, and control flow.\n\u200B",
+                        "🔹 **%d questions**\nIncludes exponential growth/decay, logarithmic properties, solving equations, and graph transformations.\n\u200B",
                         Unit2.numUnit2Questions),
                 false);
 
-        embed.addField("**Unit 3:** Class Creation",
+        embed.addField("**Unit 3:** Trigonometry & Polar Graphs",
                 String.format(
-                        "🔹 **%d questions**\nIncludes constructors, fields, accessors/mutators, `this`, and encapsulation.\n\u200B",
+                        "🔹 **%d questions**\nFocuses on trig functions, identities, solving equations, unit circle, and polar graphing.\n\u200B",
                         Unit3.numUnit3Questions),
                 false);
 
-        embed.addField("**Unit 4:** Data Collections",
+        embed.addField("**Unit 4:** Parametrics, Vectors & Matrices",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on arrays, ArrayLists, 2D arrays, traversals, search/sort, and algorithms.\n\n" +
+                        "🔹 **%d questions**\nCovers parametric equations, vectors, and matrices (note: matrices and vectors are not explicitly tested).\n\n" +
                                 "[Visit Our Website](https://customdiscordbots.org)\n" +
                                 "Contact <@840216337119969301> for any questions",
                         Unit4.numUnit4Questions),
                 false);
+
         embed.setFooter("All questions are student-created! Please report if you see any mistakes!");
 
         event.getChannel().sendMessageEmbeds(embed.build()).queue();
     }
+
 
 
     // (No Change) - Possible end of test messages
